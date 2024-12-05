@@ -1,0 +1,13 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  /* global font family: Poppins */
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
