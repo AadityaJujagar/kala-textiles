@@ -129,6 +129,21 @@ export const Navbar = () => {
               </p>
             </NavLink>
           </li>
+          <hr width="100%" />
+          <li>
+            <NavLink to="/cart" style={{ textDecoration: "none" }}>
+              <p
+                className={isActive === "/cart" ? "active" : ""}
+                onClick={() => {
+                  setIsOpen(false);
+                  setIsActive("/cart");
+                }}
+                style={{ display: "flex", color: "#0c5ca3", gap: "8px" }}
+              >
+                <LocalMallIcon fontSize="small" /> Go to Cart
+              </p>
+            </NavLink>
+          </li>
         </ul>
       )}
     </>
