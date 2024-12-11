@@ -2,11 +2,11 @@ import "./home.css";
 import { Carousel } from "../../components/carousel/Carousel";
 import { ProductsOverview } from "../../components/productsOverview/ProductsOverview";
 
-export const Home = () => {
+export const Home = ({ data }) => {
   return (
     <div>
-      <Carousel />
-      <ProductsOverview />
+      <Carousel data={data} />
+      <ProductsOverview data={data} />
     </div>
   );
 };

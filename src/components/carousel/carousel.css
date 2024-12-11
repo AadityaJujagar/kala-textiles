@@ -28,7 +28,7 @@
 }
 
 .text-overlay h1 {
-  background: linear-gradient(90deg, #dc6ad9 0%, #6bcfd8 100%);
+  background: linear-gradient(90deg, #206cae 0%, #6bcfd8 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

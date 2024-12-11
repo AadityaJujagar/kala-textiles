@@ -3,9 +3,8 @@ import "./carousel.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SlideComponent } from "../slideComponent/SlideComponent";
-import { carouselSlideData } from "../../data/data";
 
-export const Carousel = () => {
+export const Carousel = ({ data }) => {
   const settings = {
     dots: false,
     fade: true,
@@ -21,7 +20,7 @@ export const Carousel = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {carouselSlideData.map((singleData) => (
+        {data.data.carouselSlideData.map((singleData) => (
           <SlideComponent key={singleData.id} {...singleData} />
         ))}
       </Slider>
