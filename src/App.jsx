@@ -24,7 +24,6 @@ function App() {
       );
       if (!response.ok) throw new Error("Failed to fetch data");
       const fetchedData = await response.json();
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulating delay for loader
       setData(fetchedData);
     } catch (err) {
       setError(err);
