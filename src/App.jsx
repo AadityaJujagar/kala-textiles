@@ -14,13 +14,17 @@ function App() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  console.log("API URL:", import.meta.env.VITE_API_URL);
+
   const loadData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/products`
+      );
       if (!response.ok) throw new Error("Failed to fetch data");
       const fetchedData = await response.json();
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulating delay for loader
       setData(fetchedData);
     } catch (err) {
       setError(err);
