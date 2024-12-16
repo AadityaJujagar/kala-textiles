@@ -26,4 +26,3 @@ dist-ssr
 
 # Environment variable files
 .env
-.env.*   # Ignore all variations like .env.local, .env.development, etc.
