@@ -17,7 +17,7 @@ function App() {
   const loadData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/products`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
       if (!response.ok) throw new Error("Failed to fetch data");
       const fetchedData = await response.json();
       await new Promise((resolve) => setTimeout(resolve, 1000));
