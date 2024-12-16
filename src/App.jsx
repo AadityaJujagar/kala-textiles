@@ -6,9 +6,7 @@ import { Shop } from "./pages/shop/Shop";
 import { Contact } from "./pages/contact/Contact";
 import { Cart } from "./pages/cart/Cart";
 import { Footer } from "./components/footer/Footer";
-import { useState } from "react";
-import { useEffect } from "react";
-import { api } from "./api/api";
+import { useState, useEffect } from "react";
 import { Loader } from "./components/loader/Loader";
 
 function App() {
@@ -19,7 +17,9 @@ function App() {
   const loadData = async () => {
     try {
       setLoading(true);
-      const fetchedData = await api();
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/products`);
+      if (!response.ok) throw new Error("Failed to fetch data");
+      const fetchedData = await response.json();
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setData(fetchedData);
     } catch (err) {
@@ -33,7 +33,7 @@ function App() {
     loadData();
   }, []);
 
-  if (error) return <p>Error: {error}</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <>
