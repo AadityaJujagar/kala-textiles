@@ -20,7 +20,7 @@ export const Carousel = ({ data }) => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {data.data.carouselSlideData.map((singleData) => (
+        {data?.carouselSlideData.map((singleData) => (
           <SlideComponent key={singleData.id} {...singleData} />
         ))}
       </Slider>

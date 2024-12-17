@@ -14,8 +14,6 @@ function App() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  console.log("API URL:", import.meta.env.VITE_API_URL);
-
   const loadData = async () => {
     try {
       setLoading(true);

@@ -4,16 +4,21 @@ import "./productsoverview.css";
 import { NavLink } from "react-router-dom";
 
 export const ProductsOverview = ({ data }) => {
-  const productsIdentifier = data?.data?.productsIdentifier;
-  const [category, setCategory] = useState(productsIdentifier?.[0]?.name);
+  const productsIdentifier = data?.productsIdentifier || [];
+  const [category, setCategory] = useState(
+    productsIdentifier?.[0]?.name || "All"
+  );
   const productsSectionRef = useRef(null);
 
-  const normalizeCategory = (name) => name.toLowerCase().replace(/ /g, "_");
+  const normalizeCategory = (name) => {
+    if (!name) return "";
+    return name.toLowerCase().replace(/ /g, "_");
+  };
 
   const getProducts = () => {
     if (category === "All") {
       let allProductsData = [];
-      Object.values(data?.data?.allProducts).forEach((singleArray) =>
+      Object.values(data?.allProducts || {}).forEach((singleArray) =>
         singleArray.forEach((singleProduct) =>
           allProductsData.push(singleProduct)
         )
@@ -21,7 +26,7 @@ export const ProductsOverview = ({ data }) => {
       return allProductsData;
     } else {
       const normalizedCategory = normalizeCategory(category);
-      return data?.data?.allProducts[normalizedCategory];
+      return data?.allProducts?.[normalizedCategory] || []; // Return empty array if the category is missing
     }
   };
 
