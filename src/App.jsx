@@ -20,7 +20,6 @@ function App() {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/products`
       );
-      if (!response.ok) throw new Error("Failed to fetch data");
       const fetchedData = await response.json();
       setData(fetchedData);
     } catch (err) {
