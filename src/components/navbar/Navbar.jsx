@@ -33,12 +33,12 @@ export const Navbar = () => {
               Home
             </p>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }} to="/shop">
+          <NavLink style={{ textDecoration: "none" }} to="/products">
             <p
-              onClick={() => setIsActive("/shop")}
-              className={isActive === "/shop" ? "active" : ""}
+              onClick={() => setIsActive("/products")}
+              className={isActive === "/products" ? "active" : ""}
             >
-              Shop
+              Products
             </p>
           </NavLink>
           <NavLink style={{ textDecoration: "none" }} to="/about">
@@ -91,15 +91,15 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/shop" style={{ textDecoration: "none" }}>
+            <NavLink to="/products" style={{ textDecoration: "none" }}>
               <p
-                className={isActive === "/shop" ? "active" : ""}
+                className={isActive === "/products" ? "active" : ""}
                 onClick={() => {
                   setIsOpen(false);
-                  setIsActive("/shop");
+                  setIsActive("/products");
                 }}
               >
-                Shop
+                products
               </p>
             </NavLink>
           </li>
