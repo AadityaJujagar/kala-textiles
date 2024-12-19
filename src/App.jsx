@@ -53,8 +53,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home data={data} />} />
+            <Route path="/products" element={<Products data={data} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
