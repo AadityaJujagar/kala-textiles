@@ -63,9 +63,9 @@ export const CartProduct = ({ item }) => {
           <span> = </span>
           <span>{100 * item.quantity100x + item.quantity1x || 0}</span>
         </div>
-        <div className="removeFromCart" onClick={removeFromCart}>
-          <DeleteForeverIcon />
-        </div>
+      </div>
+      <div className="removeFromCart" onClick={removeFromCart}>
+        <DeleteForeverIcon />
       </div>
     </div>
   );

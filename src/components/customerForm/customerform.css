@@ -125,16 +125,14 @@ form button:hover {
 
 /* mobile */
 @media (max-width: 576px) {
-}
-
-/* tablet */
-@media (min-width: 576px) and (max-width: 768px) {
-}
-
-/* tablet-landscape */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-/* laptops and large screens */
-@media (min-width: 1024px) {
+  .cartSummary li {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: armenian;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px;
+  }
 }
