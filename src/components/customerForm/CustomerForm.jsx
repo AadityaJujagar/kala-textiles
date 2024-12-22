@@ -91,7 +91,7 @@ export const CustomerForm = ({ setOrderPlaced }) => {
       cart_items: cart
         .map(
           (item) =>
-            `${item.header}: 100x = ${item.quantity100x}, 1x = ${item.quantity1x}`
+            `${item.header}: ${100 * item.quantity100x + item.quantity1x}`
         )
         .join(", "),
     };
