@@ -35,10 +35,10 @@ export const CustomerForm = ({ setOrderPlaced }) => {
 
     emailjs
       .send(
-        "service_xivsisk",
-        "template_s9ghaxu",
+        `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`,
+        `${import.meta.env.VITE_EMAILJS_OTP_TEMPLATE_ID}`,
         templateParams,
-        "L4m2Cuu_SaTIOXQoC"
+        `${import.meta.env.VITE_EMAILJS_USER_ID}`
       )
       .then(
         () => {
@@ -98,10 +98,10 @@ export const CustomerForm = ({ setOrderPlaced }) => {
 
     emailjs
       .send(
-        "service_xivsisk",
-        "template_fob759e",
+        `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`,
+        `${import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID}`,
         templateParams,
-        "L4m2Cuu_SaTIOXQoC"
+        `${import.meta.env.VITE_EMAILJS_USER_ID}`
       )
       .then(
         () => {

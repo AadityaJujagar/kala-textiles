@@ -70,8 +70,21 @@
 
 /* tablet-landscape */
 @media (min-width: 878px) and (max-width: 1024px) {
+  .form {
+    width: 48%;
+  }
 }
 
 /* laptops and large screens */
 @media (min-width: 1024px) and (max-width: 1370px) {
+  .form {
+    width: 48%;
+  }
+}
+
+/* highter screen resolutions */
+@media (min-width: 1370px) {
+  .form {
+    width: 36%;
+  }
 }
