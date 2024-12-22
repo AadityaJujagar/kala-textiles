@@ -4,11 +4,13 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import "./navbar.css";
 import { Menu } from "../menu/Menu";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState("/");
   const location = useLocation();
+  const cart = useSelector((state) => state.cart);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,14 +35,6 @@ export const Navbar = () => {
               Home
             </p>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }} to="/products">
-            <p
-              onClick={() => setIsActive("/products")}
-              className={isActive === "/products" ? "active" : ""}
-            >
-              Products
-            </p>
-          </NavLink>
           <NavLink style={{ textDecoration: "none" }} to="/about">
             <p
               onClick={() => setIsActive("/about")}
@@ -49,21 +43,24 @@ export const Navbar = () => {
               About
             </p>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }} to="/contact">
+          <NavLink style={{ textDecoration: "none" }} to="/products">
             <p
-              onClick={() => setIsActive("/contact")}
-              className={isActive === "/contact" ? "active" : ""}
+              onClick={() => setIsActive("/products")}
+              className={isActive === "/products" ? "active" : ""}
             >
-              Contact
+              Products
             </p>
           </NavLink>
         </div>
         <NavLink
           style={{ textDecoration: "none" }}
-          className="cart-icon"
+          className="cart-nav"
           to="/cart"
         >
-          <LocalMallIcon fontSize="medium" />
+          <div className="cart-icon">
+            {cart.length > 0 && <span>{cart.length}</span>}
+            <LocalMallIcon fontSize="medium" />
+          </div>
           <p
             onClick={() => setIsActive("/cart")}
             className={isActive === "/cart" ? "active" : ""}
@@ -91,19 +88,6 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/products" style={{ textDecoration: "none" }}>
-              <p
-                className={isActive === "/products" ? "active" : ""}
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsActive("/products");
-                }}
-              >
-                products
-              </p>
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/about" style={{ textDecoration: "none" }}>
               <p
                 className={isActive === "/about" ? "active" : ""}
@@ -117,15 +101,15 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" style={{ textDecoration: "none" }}>
+            <NavLink to="/products" style={{ textDecoration: "none" }}>
               <p
-                className={isActive === "/contact" ? "active" : ""}
+                className={isActive === "/products" ? "active" : ""}
                 onClick={() => {
                   setIsOpen(false);
-                  setIsActive("/contact");
+                  setIsActive("/products");
                 }}
               >
-                Contact
+                products
               </p>
             </NavLink>
           </li>

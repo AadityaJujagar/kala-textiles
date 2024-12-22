@@ -30,9 +30,9 @@ export const Footer = () => {
           <p>Quick Navigate</p>
           <div className="foot-links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/products">Products</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/cart">Cart</NavLink>
           </div>
         </div>
         <div className="foot-col">

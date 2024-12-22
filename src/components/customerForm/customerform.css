@@ -1,0 +1,140 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: 50px;
+  border-radius: 20px;
+  background-color: #0c5ca3;
+  padding: 36px;
+  gap: 12px;
+  width: 100%;
+}
+
+form span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+label {
+  width: 100%;
+}
+
+label p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.375rem;
+}
+
+label p sup {
+  color: #ff0000;
+  font-size: 0.875rem;
+}
+
+input,
+textarea {
+  background: #1079d4;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  color: #f0f0f0;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active,
+input:hover,
+textarea:hover {
+  background: #1079d4;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background: #1079d4 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1079d4 inset !important;
+  box-shadow: 0 0 0px 1000px #1079d4 inset !important;
+  border: none;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  background: #1079d4 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: none;
+  outline: none;
+}
+
+.cartSummary {
+  border-top: 1px solid #c9c9c9;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.cartSummary h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cartSummary li {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: armenian;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+}
+
+form button {
+  padding: 12px 64px;
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid #0c5ca3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f0f0f0;
+  color: #0c5ca3;
+}
+
+form button:hover {
+  background: transparent;
+  border: 1px solid #f0f0f0;
+  color: #fff;
+}
+
+/* mobile */
+@media (max-width: 576px) {
+}
+
+/* tablet */
+@media (min-width: 576px) and (max-width: 768px) {
+}
+
+/* tablet-landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* laptops and large screens */
+@media (min-width: 1024px) {
+}
