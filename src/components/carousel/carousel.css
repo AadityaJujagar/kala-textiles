@@ -53,10 +53,11 @@
 /* mobile */
 @media (max-width: 576px) {
   .text-overlay h1 {
-    font-size: 3.4rem;
-    text-align: center;
-    font-weight: bold;
-    padding: 4px;
+    margin: 20px 0;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    padding: 0;
   }
 }
 

@@ -1,0 +1,40 @@
+.infraSlider {
+  width: 600px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.infraSlider img {
+  width: 100%;
+  height: 100%;
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .infraSlider {
+    width: 98%;
+  }
+}
+
+/* tablet */
+@media (min-width: 576px) and (max-width: 878px) {
+  .infraSlider {
+    width: 80%;
+  }
+}
+
+/* tablet-landscape */
+@media (min-width: 878px) and (max-width: 1024px) {
+  .infraSlider {
+    width: 400px;
+  }
+}
+
+/* laptops and large screens */
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .infraSlider {
+    width: 400px;
+  }
+}

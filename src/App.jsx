@@ -52,7 +52,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home data={data} />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About data={data} />} />
             <Route path="/products" element={<Products data={data} />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>

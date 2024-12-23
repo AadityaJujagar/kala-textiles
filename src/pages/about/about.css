@@ -1,0 +1,357 @@
+.about {
+  padding: 102px 0 72px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.aboutUs {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 36px;
+}
+
+.aboutUs span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444444;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.aboutUs p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #777777;
+  text-align: center;
+}
+
+.whyUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  width: 100%;
+}
+
+.whyUsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.whyUsGridItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 15px;
+  background: #f4f4f4;
+  padding: 48px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.featuresGridItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 15px;
+  background: #fff;
+  padding: 48px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.whyUsGridItem:hover {
+  background: #fff;
+  border: 1px solid #f1f1f1;
+}
+
+.featuresGridItem:hover {
+  background: #f4f4f4;
+}
+
+.whyUsGridItem .icon,
+.featuresGridItem .icon {
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 8px;
+  transition: scale 0.3s ease-in-out;
+}
+
+.featuresExtro .featureDiv .icon {
+  width: 52px;
+  height: 52px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 12px;
+  transition: scale 0.3s ease-in-out;
+}
+
+.featureDiv {
+  padding: 12px;
+}
+
+.featureDiv h1 {
+  font-size: 24px;
+  padding: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.featureDiv p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.whyUsGridItem:hover .icon,
+.featuresExtro .featureDiv:hover .icon,
+.featuresGridItem:hover .icon {
+  scale: 1.1;
+}
+
+.whyUsGridItem h2,
+.featuresGridItem h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.gridSubHeader {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444444;
+}
+
+.whyUsGridItem span {
+  position: absolute;
+  right: 8px;
+  top: -36px;
+  font-size: 10rem;
+  color: #fff;
+  font-weight: 900;
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.whyUsGridItem:hover span {
+  -webkit-text-stroke: 1px #444444;
+  opacity: 0.1;
+}
+
+.featuresGridItem span {
+  position: absolute;
+  right: 0;
+  top: -36px;
+  font-size: 10rem;
+  font-weight: 900;
+  z-index: 1;
+  white-space: nowrap;
+  color: #f1f1f1;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.whyUsGridItem:hover span {
+  -webkit-text-stroke: 1px #fff;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.infrastructure,
+.environment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 80%;
+}
+
+.infraInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 36%;
+  gap: 24px;
+}
+
+.infraInfo h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+.infraInfo p {
+  color: #777777;
+}
+
+.infraInfo ul {
+  list-style-type: circle;
+  margin: 0;
+}
+
+.infraInfo ul li {
+  margin-bottom: 8px;
+  position: relative;
+  color: #444444;
+  font-weight: 600;
+}
+
+.infraInfo ul li::marker {
+  color: #0c5ca3;
+  font-size: 18px;
+}
+
+.featuresExtro {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 48px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featuresExtro .featureDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .aboutUs {
+    width: 80%;
+  }
+  .whyUsGrid,
+  .featuresGrid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 24px;
+  }
+  .infrastructure,
+  .environment {
+    gap: 24px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .infraInfo {
+    width: 92%;
+  }
+  .featuresExtro {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* tablet */
+@media (min-width: 576px) and (max-width: 878px) {
+  .aboutUs {
+    width: 80%;
+  }
+  .whyUsGrid,
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  .infrastructure,
+  .environment {
+    gap: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .infraInfo {
+    width: 80%;
+  }
+  .featuresExtro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* tablet-landscape */
+@media (min-width: 878px) and (max-width: 1024px) {
+  .aboutUs {
+    width: 80%;
+  }
+  .whyUsGrid,
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  .infrastructure,
+  .environment {
+    gap: 36px;
+    width: 100%;
+  }
+  .infraInfo {
+    width: 48%;
+  }
+  .featuresExtro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* laptops and large screens */
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .whyUsGrid,
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  .infrastructure,
+  .environment {
+    gap: 48px;
+    width: 100%;
+  }
+}

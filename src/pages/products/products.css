@@ -9,7 +9,7 @@
 /* mobile */
 @media (max-width: 576px) {
   .products {
-    width: 380px;
+    width: 340px;
     grid-template-columns: repeat(1, 1fr);
   }
 }
