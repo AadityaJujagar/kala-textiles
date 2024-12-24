@@ -142,6 +142,13 @@ nav img {
   .cart-nav {
     display: none;
   }
+  .cart-icon{
+    position: relative;
+  }
+  .cart-icon span{
+    top: 2px; 
+    left: 2px;
+  }
 }
 
 /* tablet */
