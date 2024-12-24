@@ -59,7 +59,7 @@ nav img {
   color: #0c5ca3;
   gap: 6px;
   position: relative;
-  padding: 12px;
+  padding: 14px;
 }
 
 .cart-icon {
@@ -130,6 +130,12 @@ nav img {
   padding: 12px;
 }
 
+.menu-items li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* mobile */
 @media (max-width: 576px) {
   .nav-elements,
@@ -143,6 +149,13 @@ nav img {
   .nav-elements,
   .cart-nav {
     display: none;
+  }
+  .cart-icon{
+    position: relative;
+  }
+  .cart-icon span{
+    top: 2px; 
+    left: 2px;
   }
 }
 

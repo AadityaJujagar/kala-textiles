@@ -116,6 +116,10 @@ export const Navbar = () => {
           <hr width="100%" />
           <li>
             <NavLink to="/cart" style={{ textDecoration: "none" }}>
+              <div className="cart-icon">
+                {cart.length > 0 && <span>{cart.length}</span>}
+                <LocalMallIcon color="#0c5ca3" fontSize="medium" />
+              </div>
               <p
                 className={isActive === "/cart" ? "active" : ""}
                 onClick={() => {
@@ -124,7 +128,7 @@ export const Navbar = () => {
                 }}
                 style={{ display: "flex", color: "#0c5ca3", gap: "8px" }}
               >
-                <LocalMallIcon fontSize="small" /> Go to Cart
+                Go to Cart
               </p>
             </NavLink>
           </li>
